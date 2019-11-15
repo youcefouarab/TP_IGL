@@ -1,2 +1,2 @@
 # TP_IGL
-TP_IGL Application de scolarité
+TP_IGL Application Web de scolarité
