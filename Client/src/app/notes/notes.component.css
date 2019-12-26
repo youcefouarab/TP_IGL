@@ -1,0 +1,49 @@
+.table {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%,0);
+    
+}		
+	
+.table .block{
+	width:150px;
+    background:#fff;
+    display: inline-block;
+}
+	
+.table .block .entete{
+	width:150px;
+    border-bottom: 1px solid #fff;
+	background:#212666;
+	padding:20px 0;
+	}
+	
+.table .block .entete h3{
+	text-align:center;
+    font-size:16px;
+    font-weight: normal;
+	color:#fff;
+	}
+
+	
+.table .block ul{
+    list-style: none;
+    text-align: center;
+    width:100%;
+    background-color: #fafafa;
+	}
+	
+.table .block ul li{
+    text-align:center;
+	font-size:16px;
+	color:#000;
+	font-weight:normal;
+	padding:15px 30px 15px 30px;
+	border-bottom:solid 1px #eee;
+    }
+    
+.table .modules ul li {
+    background-color: #212666;
+    color: #fff;
+}

@@ -1,0 +1,20 @@
+<form #Form='ngForm' (ngSubmit)="ajouter(Form.value)">
+    <div class="header">
+        AJOUTER UN ETUDIANT
+    </div>
+    <div class="body form-group">
+        <input #nom_="ngModel" class="form-control" type="text" placeholder="NOM" name="nom" [(ngModel)]="nom" required>
+        <input #prenom_="ngModel" class="form-control" type="text" placeholder="PRENOM" name="prenom" [(ngModel)]="prenom" required><br>
+        <label style="margin-left:80px;">Né le</label>
+        <input #date_naissance_="ngModel" class="form-control" type="date" placeholder="DATE DE NAISSANCE" name="date_naissance" [(ngModel)]="date_naissance" required>
+        <label style="margin-left:36px;">à</label>
+        <input #lieu_naissance_="ngModel" class="form-control" style="margin-left:36px;" type="text" placeholder="LIEU DE NAISSANCE" name="lieu_naissance" [(ngModel)]="lieu_naissance" required><br>
+        <label style="margin-left:80px;">Année</label>
+            <input #annee_="ngModel" class="form-control" type="radio" name="annee" [(ngModel)]="annee" value="1CP" ><label style="margin-left:10px;">1CP</label>
+            <input #annee_="ngModel" class="form-control" type="radio" name="annee" [(ngModel)]="annee" value="2CP" ><label style="margin-left:10px;">2CP</label>
+            <input #annee_="ngModel" class="form-control" type="radio" name="annee" [(ngModel)]="annee" value="1CS" ><label style="margin-left:10px;">1CS</label>
+            <input #annee_="ngModel" class="form-control" type="radio" name="annee" [(ngModel)]="annee" value="2CS" ><label style="margin-left:10px;">2CS</label>
+            <input #annee_="ngModel" class="form-control" type="radio" name="annee" [(ngModel)]="annee" value="3CS" ><label style="margin-left:10px;">3CS</label><br>
+        <input type="submit" value="AJOUTER ETUDIANT">
+    </div>
+</form>
