@@ -11,7 +11,7 @@ class etudiantController extends Controller
     public function store(Request $request) {
         
         if (Compte::where('login','=',$request->nom)->where('password','=',$request->prenom.$request->date_naissance)->exists()) 
-            return "exist";
+            return "existe";
         else {
             $compte=new compte();
             $compte->login=($request->nom);

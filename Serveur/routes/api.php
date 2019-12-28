@@ -15,3 +15,7 @@ use Illuminate\Http\Request;
 
 Route::get('notes/{matricule}','noteController@show');
 Route::post('ajouter','EtudiantController@store');
+
+Route::get('tester/{test}', function (Request $request) {
+    return $request->test.' hello';
+});

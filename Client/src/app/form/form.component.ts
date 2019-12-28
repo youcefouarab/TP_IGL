@@ -22,8 +22,8 @@ export class FormComponent implements OnInit {
       data).subscribe((reponse)=>{
       //console.log(reponse);
       if (reponse=="succes") alert("Succes: Etudiant ajouté!");
-      if (reponse=="fail") alert("Erreur: Etudiant n'a pas été ajouté!");
-      if (reponse=="exist") alert("Erreur: Etudiant exist déja!");
+      if (reponse=="echec") alert("Erreur: Etudiant n'a pas été ajouté!");
+      if (reponse=="existe") alert("Erreur: Etudiant exist déja!");
      }); 
   }
 

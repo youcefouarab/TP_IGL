@@ -22,7 +22,7 @@ class CreateNotesTable extends Migration
             $table->float('moy');
             $table->integer('id_etudiant');
         });
-        Artisan::call('db:seed');
+        //Artisan::call('db:seed');
     }
 
     /**
