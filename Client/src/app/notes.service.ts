@@ -12,6 +12,6 @@ export class NotesService {
   }
 
   public getNotes() {
-    return this.http.get("http://localhost:8000/api/notes/1", { responseType: 'text' });
+    return this.http.get("http://localhost:8080/api/notes/1", { responseType: 'text' });
   }
 }
