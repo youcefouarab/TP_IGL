@@ -7,11 +7,24 @@ use App\Etudiant;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
+
+/**
+ * Test unitaire de consultation de notes
+ */
 class NoteTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testNoteShowMarche(){
+
+    /**
+     * Teste l'API `notes`.
+     * 
+     * Remplit la base de donnees avec des notes aleatoires.
+     * Assure qu'il y a 8 lignes de notes.
+     * Effectue une requete GET vers l'API `notes` avec le matricule `1`.
+     * Assure que la reponse est en etat `200`.
+     */
+    public function testConsulterNotes(){
         
         $this->seed('DatabaseSeeder');
 
@@ -21,6 +34,6 @@ class NoteTest extends TestCase
         
         $response->assertStatus(200);
         
-        dd($response);
+        //dd($response);
     }
 }

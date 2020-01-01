@@ -8,6 +8,10 @@ import { FormService } from './form.service';
   styleUrls: ['./form.component.css'],
   providers: [FormService]
 })
+
+/**
+ * Composant du formulaire d'ajout d'etudiant.
+ */
 export class FormComponent implements OnInit {
 
   constructor(private formService: FormService) { }
@@ -15,12 +19,18 @@ export class FormComponent implements OnInit {
   ngOnInit() {
   }
 
+  /** 
+     * Appelle le service d'ajout d'etudiant.
+     * 
+     * Appelle la methode `ajouterEtudiant` du service `form` avec le parametre `etudiant` et recoit la reponse JSON.
+     * La reponse est ensuite affichee comme message d'alerte.
+     * 
+     * @param etudiant  L'objet contenant les informations de l'etudiant à partir du formulaire HTML.
+     */
   ajouter(etudiant) {
-    //console.log(etudiant);
     
     this.formService.ajouterEtudiant(etudiant).map(data=>
       data).subscribe((reponse)=>{
-      //console.log(reponse);
       if (reponse=="succes") alert("Succes: Etudiant ajouté!");
       if (reponse=="echec") alert("Erreur: Etudiant n'a pas été ajouté!");
       if (reponse=="existe") alert("Erreur: Etudiant exist déja!");

@@ -2,10 +2,15 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Seeder pour ajouter un compte pour les tests.
+ */
 class NotesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     * 
+     * Ajouter 8 modules avec des notes CC, CI, CF aleatoires et calculer la moyenne pour chacun.
      *
      * @return void
      */
@@ -23,7 +28,7 @@ class NotesTableSeeder extends Seeder
                 'ci' => $ci,
                 'cf' => $cf,
                 'moy' => $moy,
-                'id_etudiant' => 1
+                'matricule' => 1
             ]);
         }
 

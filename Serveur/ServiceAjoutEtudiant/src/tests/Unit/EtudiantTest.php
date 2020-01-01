@@ -7,10 +7,20 @@ use App\Compte;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
+/**
+ * Test unitaire d'ajout d'etudiant
+ */
 class EtudiantTest extends TestCase
 {
     use RefreshDatabase;
 
+    /**
+     * Teste l'API `ajouter`.
+     * 
+     * Assure que la base de donnees de test est vide.
+     * Effectue une requete POST vers l'API `ajouter` avec un etudiant.
+     * Assure que l'etudiant et son compte sont ajoutes dans les tables `etudiants` et `comptes` respectivement.
+     */
     public function testAjouterEtudiant(){
         
         $this->assertCount(0, Etudiant::all());

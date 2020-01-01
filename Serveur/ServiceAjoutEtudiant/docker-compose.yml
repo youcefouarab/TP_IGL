@@ -6,7 +6,7 @@ networks:
 services:
   nginx:
     image: nginx:stable-alpine
-    container_name: nginx_ajout
+    container_name: nginx_comptes
     ports:
       - "8000:80"
     volumes:
@@ -20,7 +20,7 @@ services:
 
   mysql:
     image: mysql:5.7.22
-    container_name: mysql_ajout
+    container_name: mysql_comptes
     restart: always
     tty: true
     ports:
@@ -28,7 +28,7 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: ServiceAjoutEtudiant
+      MYSQL_DATABASE: Comptes
       MYSQL_USER: root
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: root
@@ -39,7 +39,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: php_ajout
+    container_name: php_comptes
     volumes:
       - ./src:/var/www
     ports:

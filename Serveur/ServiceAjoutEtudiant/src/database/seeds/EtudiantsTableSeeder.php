@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Seeder pour ajouter un etudiant pour les tests.
+ */
 class EtudiantsTableSeeder extends Seeder
 {
     /**

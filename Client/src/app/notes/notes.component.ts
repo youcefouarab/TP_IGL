@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NotesService } from '../notes.service';
+import { NotesService } from './notes.service';
 
 
 @Component({
@@ -11,6 +11,9 @@ import { NotesService } from '../notes.service';
 
 })
 
+/**
+ * Composant du tableau des notes.
+ */
 export class NotesComponent implements OnInit {
 
   constructor(private notesService: NotesService) { }
@@ -18,10 +21,19 @@ export class NotesComponent implements OnInit {
   modules = []; ccs = []; cis = []; cfs = []; moys = [];
 
   ngOnInit() {
-    console.log("here from etud");
+    this.notes();
+     
+  }
+  /**
+     * Appelle le service de recuperation des notes.
+     * 
+     * Appelle la methode `getNotes` du service `notes` et recoit la reponse JSON.
+     * La reponse est ensuite decodee pour avoir un tableau de notes utilisable par l'affichage HTML.
+     */
+  notes() {
+    
     this.notesService.getNotes().map(data=>
       data).subscribe((reponse)=>{
-        console.log(reponse);
         interface note {
           module:string;
           cc:number;
@@ -37,9 +49,7 @@ export class NotesComponent implements OnInit {
           this.cfs[i]=notes[i].cf;
           this.moys[i]=notes[i].moy;
         }
-        console.log(this.modules);
      });
-     
-  }  
+  }
 
 }

@@ -4,6 +4,10 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
+/**
+ * Migration qui cree la table `notes`.
+ */
 class CreateNotesTable extends Migration
 {
     /**
@@ -20,9 +24,8 @@ class CreateNotesTable extends Migration
             $table->float('ci');
             $table->float('cf');
             $table->float('moy');
-            $table->integer('id_etudiant');
+            $table->integer('matricule');
         });
-        //Artisan::call('db:seed');
     }
 
     /**

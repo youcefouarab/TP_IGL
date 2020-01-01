@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+/**
+ * Seeder pour ajouter un compte pour les tests.
+ */
 class ComptesTableSeeder extends Seeder
 {
     /**

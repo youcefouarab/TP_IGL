@@ -12,8 +12,21 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
+/**
+ * Classe de test automatise par Selenium.
+ */
 public class Selenium {
 
+
+    /**
+         * Effectue un test automatise de la fonctionnalite `ConsulterNotes` a l'aide de Selenium.
+         * 
+         * Ouvre la page de consultation des notes dans les navigateurs Chrome, Firefox et Internet Explorer.
+         * Pour chacun, elle verifie la presence des notes dans la page.
+         * Dans le cas ou les notes sont presentes (les elements de classe `test`), le test se termine avec un succes.
+         * Dans le cas contraire, il se termine avec un echec.
+         */
     public static void main(String[] args) {
         
         System.setProperty("webdriver.chrome.driver","chromedriver.exe");
@@ -30,11 +43,11 @@ public class Selenium {
         }
         chrome.quit();
         
-        /*System.setProperty("webdriver.firefox.driver","geckodriver.exe");
+        System.setProperty("webdriver.firefox.driver","geckodriver.exe");
         WebDriver firefox = new FirefoxDriver();
         firefox.get("http://localhost:4200/etud");
-        WebDriverWait wait = new WebDriverWait(firefox, 20);
-        List<WebElement> elts =wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("test")));
+        wait = new WebDriverWait(firefox, 20);
+        elts =wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("test")));
         if (elts.isEmpty()) System.out.println("ECHEC");
         else {
             elts.forEach((e) -> {
@@ -42,7 +55,7 @@ public class Selenium {
             });
             System.out.println("SUCCES");
         }
-        firefox.quit();*/
+        firefox.quit();
         
         /*System.setProperty("webdriver.internetexplorer.driver","IEDriverServer.exe");
         WebDriver ie = new InternetExplorerDriver();
